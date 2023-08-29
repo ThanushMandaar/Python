@@ -1,0 +1,38 @@
+
+def rectangle():
+   length=int(input("Enter the length of the rectangle:"))
+   breadth=int(input("Enter the breadth of the rectangle:"))
+   print("Area of therectangle  is",length*breadth,"square units.")
+def square():
+   side=int(input("Enter the size of a side of a square : "))
+   print("Area of the square is",side**2,"square units.")
+def circle():
+   radius=int(input("Enter the radius : "))
+   print("Area of the circle is", 3.14* (radius**2),"square units.")                                                                        
+def triangle():
+    a = int(input("Enter the length of first side:"))  
+    b = int(input("Enter  the length of second side: "))  
+    c = int(input("Enter  the length of third side: "))  
+    s = (a + b + c) / 2  
+    Area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  
+    print("The area of the triangle is", Area,"square units.")          
+while(True):
+    print("Menu-\n"
+    "1. Rectangle\n"
+    "2. Square\n"
+    "3. Circle\n"
+    "4. Triangle \n"
+    "5. Exit \n")
+    x=int(input("Enter the corresponding number of the shape : "))
+    if x==1:
+        rectangle()
+    elif x==2:
+        square()
+    elif x==3:
+        circle()
+    elif x==4:
+        triangle()
+    elif x==5:
+        break
+    else:
+        print("\nWrong Input!")
