@@ -1,0 +1,20 @@
+print("Enter total number of elements required in the list")
+n=int(input())
+i=0
+myList= []
+print("Enter the elements")
+while i<n:
+    num =int(input())
+    myList.append(num)
+    i=i+1
+uniqueList = []
+for item in myList :
+    itemExist = False
+    for x in uniqueList :
+        if x == item :
+            itemExist = True
+            uniqueList.remove(item)
+            break
+    if not itemExist :
+        uniqueList.append(item)
+print(“Unique List is:”,uniqueList)
