@@ -1,0 +1,24 @@
+t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
+print("\nGiven tuple is",t1)
+tp1 = t1[:5]
+tp2 = t1[5:]
+print("half value in one line, other values in another line")
+print(tp1)
+print(tp2)
+t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
+print("\nTuple Items = ", t1)
+li=list()
+for i in range(len(t1)):
+    if(t1[i] % 2 == 0):
+        li.append(t1[i])
+t2=tuple(set(li))
+print("The Even Numbers in the  given Tuple are:" + str(t2))
+print("\nCONCATENATE TUPLES")
+tuple1=(1,2,5,7,9,2,4,6,8,10)
+tuple2=(11,13,15)
+print("Tuple1=",tuple1)
+print("Tuple2=",tuple2)
+res=tuple1+tuple2
+print("After concatenation the tuple is:",res)
+print("\n maxvalue=",max(res))
+print("\n minvalue=",min(res))
