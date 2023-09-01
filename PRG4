@@ -1,0 +1,12 @@
+
+def inputstring(str1):
+    frequencies = {} 
+    for char in str1: 
+        if char in frequencies: 
+            frequencies[char] += 1
+        else: 
+            frequencies[char] = 1
+    return frequencies
+
+newstring=input("Enter the string:")
+print (inputstring(newstring))
