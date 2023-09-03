@@ -1,0 +1,26 @@
+class Error(Exception):
+    """Base class for other exceptions"""
+    pass
+class SmallValueError(Error):
+    """Raised when the input value is too small"""
+    pass
+class LargeValueError(Error):
+    """Raised when the input value is too large"""
+    pass
+# you need to guess this number
+number = 20
+while True:
+    try:
+        i_num = int(input("Enter a number: "))
+        if i_num< number:
+            raise SmallValueError
+        elif i_num> number:
+            raise LargeValueError
+        break
+    except SmallValueError:
+        print("This value is too small, try again!")
+        print()
+    except LargeValueError:
+        print("This value is too large, try again!")
+        print()
+print("Congratulations! You guessed it correctly.")
