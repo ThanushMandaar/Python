@@ -1,0 +1,68 @@
+class Employee:
+    def __init__(self,empno,name,deptname,desig,age,salary):
+        self.empno=empno
+        self.name = name
+        self.deptname =deptname
+        self.desig = desig
+        self.age = age
+        self.salary=salary
+    # Function to create and append new Employee   
+    def getempdetails(empno,name,deptname,desig,age,salary):
+        ob = Employee(empno,name,deptname,desig,age,salary )
+        ls.append(ob)
+    # Function to display Employee details     
+    def display(ob):
+            print("Emloyee Number   :",ob.empno)
+            print("Name   : ", ob.name)
+            print("Department Name : ", ob.deptname)
+            print("Designation : ", ob.desig)
+            print("Age : ", ob.age)
+            print("Salary  :",ob.salary)
+            print("\n")  
+    # Search Function    
+    def search(eno):
+        found=False
+        for i in range(ls.__len__()):
+            if(ls[i].empno == eno):
+                found=True
+                break
+            else:
+                found= False 
+        if(found==True): 
+            print("Employee Found")
+            obj.display(ls[i])
+        else:
+            print("Employee Not Found")  
+# Create a list to add Employees
+ls =[]
+obj = Employee
+while(True):
+    print("   MENU ")
+    print("1.Accept Employee details")
+    print("2.Display Employee Details") 
+    print("3.Search Details of an Employee")
+    print("4.Exit")
+    ch = int(input("Enter choice:"))
+    if(ch == 1):
+        x='y'
+        while(x=='y'):
+            empno=int(input("Enter empno: "))
+            name=input("Enter name: ")
+            deptname=input("Enter deptname :")
+            desig=input("Enter designation: ")
+            age=input("Enter age: ")
+            salary=input("Enter salary: ")
+            obj.getempdetails(empno,name,deptname,desig,age,salary)
+            x=input("Do you want to add more employees(y/n)?")
+        print("\n")
+    elif(ch == 2):
+        print("\nList of Employees\n")
+        for i in range(ls.__len__()):    
+            obj.display(ls[i])
+    elif(ch == 3):             
+        id = int(input("Enter Id U Want to Search?"))
+        obj.search(id)     
+    elif(ch == 4):
+        break
+    else:
+        print("Wrong Choice!")
